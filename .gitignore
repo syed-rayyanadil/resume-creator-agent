@@ -11,8 +11,9 @@ __pycache__/
 # Databases
 data/qdrant_db/
 
-# Personal Data (Uncomment below if your repo is public to protect your info)
-# data/my_data.json
+# Personal Data
+data/my_data.json
+my_data.json
 
 # OS generated files
 .DS_Store
