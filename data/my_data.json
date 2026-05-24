@@ -1,0 +1,161 @@
+{
+  "personal": {
+    "name": "Syed Rayyan Adil",
+    "location": "Germany",
+    "phone": "+49 152 06835173",
+    "email": "syed.rayyanadil@gmail.com",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+
+  "skills": [
+    "Java", "Kotlin", "Python", "Golang", "TypeScript", "JavaScript", "PHP",
+    "Spring Boot", "Spring MVC", "Laravel", "React", "Angular", "Redux", "Flask", "JPA/Hibernate",
+    "PyTorch", "OpenCV", "CNN", "YOLO", "Object Detection", "Image Classification",
+    "Autoencoder", "Sklearn", "Pandas", "NumPy", "Deep Learning",
+    "Vision Transformers", "VLMs", "Zero-Shot Learning", "Transformers",
+    "CLIP", "BLIP", "LLaVA", "GANs", "Transfer Learning", "Reinforcement Learning", "LLMs",
+    "PostgreSQL", "MongoDB", "MySQL",
+    "Hexagonal Architecture", "Microservices", "REST APIs", "Strategy Pattern",
+    "Clean Code", "TDD", "Agile", "CI/CD",
+    "Kotest", "JUnit", "Mockito",
+    "Docker", "Kubernetes", "Git", "GitHub Actions", "Azure DevOps",
+    "Google Cloud Platform (GCP)", "SonarQube", "Liquibase", "Swagger",
+    "Jira", "Confluence", "Jupyter", "Google Colab", "PuTTY", "Wildfly", "Jenkins"
+  ],
+
+  "education": [
+    {
+      "id": "edu_01",
+      "degree": "MSc in Artificial Intelligence",
+      "institution": "Brandenburgische Technische Universität (BTU)",
+      "location": "Germany",
+      "period": "October 2023 – October 2026",
+      "status": "Ongoing",
+      "thesis": "Interpretable Image Classification by AutoEncoder Model"
+    },
+    {
+      "id": "edu_02",
+      "degree": "BSc in Computer Science",
+      "institution": "FAST-NUCES",
+      "location": "Pakistan",
+      "period": "August 2017 – May 2021",
+      "final_year_project": "Smart Video Surveillance System using Computer Vision"
+    }
+  ],
+
+  "experience": [
+    {
+      "id": "exp_01",
+      "role": "Working Student – Software Engineer",
+      "company": "Schwarz Digits (Schwarz Gruppe)",
+      "location": "Germany",
+      "period": "February 2025 – August 2025",
+      "domain": "Warehouse & Logistics / Supply Chain (Returns – Lidl & Kaufland)",
+      "highlights": [
+        "Migrated 2 critical backend services from Java to Kotlin within a 3-engineer team, maintaining Hexagonal Architecture for scalable, highly available solutions serving millions of users.",
+        "Drove Clean Code and TDD practices (Kotest, JUnit/Mockito) across features and bug fixes, reducing code smells via SonarQube.",
+        "Owned Azure DevOps CI/CD pipelines with Docker and Kubernetes deployments; managed PostgreSQL schema migrations via Liquibase.",
+        "Built and shipped React (TypeScript) frontend features end-to-end, collaborating with Product Managers via Jira to translate supply chain requirements into production-ready functionality.",
+        "Visited warehouse to understand return workflows and clarify requirements directly with stakeholders.",
+        "Led Computer Vision research discussions on object detection and interpretable image classification, drawing on Bachelor's FYP and ongoing MS thesis."
+      ],
+      "technologies": ["Java", "Kotlin", "React", "TypeScript", "PostgreSQL", "Liquibase", "Azure DevOps", "Docker", "Kubernetes", "SonarQube", "Kotest", "JUnit", "Mockito", "Jira"]
+    },
+    {
+      "id": "exp_02",
+      "role": "Software Engineer",
+      "company": "Benchmatrix",
+      "location": "Pakistan",
+      "period": "May 2022 – October 2023",
+      "projects": [
+        {
+          "name": "Loan Origination System (LOS)",
+          "domain": "Fintech",
+          "highlights": [
+            "Designed and shipped microservices supporting operations for over 7 banks and millions of users, applying design patterns and Clean Code principles.",
+            "Architected and optimized REST APIs documented with Swagger; wrote automated tests to ensure reliability across multiple banking integrations.",
+            "Integrated frontend teams using Angular (JavaScript) and owned CI/CD pipelines via Jenkins.",
+            "Managed MongoDB and SQL databases; coordinated cross-team delivery using Jira."
+          ],
+          "technologies": ["Java", "Spring MVC", "Golang", "Angular", "JavaScript", "MongoDB", "SQL", "Swagger", "Jenkins", "Jira"]
+        }
+      ]
+    },
+    {
+      "id": "exp_03",
+      "role": "Software Engineer",
+      "company": "GoodCore Software",
+      "location": "Pakistan",
+      "period": "July 2021 – May 2022",
+      "projects": [
+        {
+          "name": "Project 1: Domain Registry Applications",
+          "domain": "Government / ICANN",
+          "highlights": [
+            "Built ICANN-recognized domain registry software for the Malaysian Government using Java (Spring Boot), MySQL, and JPA/Hibernate.",
+            "Authored REST API documentation with Swagger, enforced code quality via SonarQube, and ensured reliability through JUnit/Mockito unit testing.",
+            "Deployed services on Wildfly and configured server environments via PuTTY, maintaining stable production operations."
+          ],
+          "technologies": ["Java", "Spring Boot", "MySQL", "JPA", "Hibernate", "Swagger", "SonarQube", "JUnit", "Mockito", "Wildfly", "PuTTY"]
+        },
+        {
+          "name": "Project 2: Briefing Management Platform",
+          "domain": "Enterprise SaaS (60+ Fortune 500 clients incl. LinkedIn, IBM, Nvidia, Salesforce, Red Hat)",
+          "highlights": [
+            "Implemented business logic improvements and core features in a PHP (Laravel) and React (JavaScript) platform.",
+            "Refactored state management with Redux, integrated Zoom API for client meetings, and resolved legacy bugs to improve system stability.",
+            "Drove automation of printed material generation (PDFs, Word docs), reducing manual effort for briefing workflows."
+          ],
+          "technologies": ["PHP", "Laravel", "React", "JavaScript", "Redux", "Zoom API"]
+        }
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "proj_01",
+      "name": "Smart Video Surveillance System",
+      "type": "Final Year Project (BSc)",
+      "github": "https://github.com/syed-rayyanadil/Smart-Video-Surveillance-System",
+      "description": "Real-time gun detection and person identification system trained on 50,000 images with 70% accuracy. Distinguishes known vs unknown individuals and triggers alarms, notifying authorities within 3 seconds.",
+      "technologies": ["Python", "Computer Vision", "CNN", "YOLO", "Google Colab", "PyCharm"]
+    },
+    {
+      "id": "proj_02",
+      "name": "Facial Emotion Recognition",
+      "github": "https://github.com/syed-rayyanadil/Emotion-Detection",
+      "description": "CNN-based facial emotion recognition model achieving 95% accuracy across neutral, happy, and sad states; validated on over 10,000 facial images.",
+      "technologies": ["Python", "Computer Vision", "CNN", "Deep Learning"]
+    },
+    {
+      "id": "proj_03",
+      "name": "Recommender System",
+      "github": "https://github.com/syed-rayyanadil/Recommender-System",
+      "description": "Content-based movie recommender using Bag-of-Words and cosine similarity (top-5 results) and a collaborative clustering book recommender using Nearest Neighbor and Pearson Correlation (top-10 results).",
+      "technologies": ["Python", "Pandas", "NumPy", "Sklearn", "SciPy", "NLTK"]
+    },
+    {
+      "id": "proj_04",
+      "name": "Life Expectancy at Birth",
+      "github": "https://github.com/syed-rayyanadil/Life-Expectancy-at-Birth",
+      "description": "Predictive model for life expectancy at birth for 2020, focusing on unemployed individuals, helping assess birth rates across countries and genders.",
+      "technologies": ["Python", "Pandas", "Sklearn"]
+    },
+    {
+      "id": "proj_05",
+      "name": "What's Cooking?",
+      "github": "https://github.com/syed-rayyanadil/What-is-Cooking",
+      "description": "Cuisine type classifier trained on 60,000 dishes; auto-categorizes dishes based on ingredient similarities to enhance food recommendation systems.",
+      "technologies": ["Python", "Computer Vision", "CNN", "YOLO", "Google Colab", "PyCharm"]
+    },
+    {
+      "id": "proj_06",
+      "name": "Zero-Shot Safety Violation Detection",
+      "github": "GitHub",
+      "description": "Real-time workplace safety monitoring system using CLIP to detect violations (e.g., missing PPE) via natural language prompts and zero-shot learning, eliminating task-specific model retraining.",
+      "technologies": ["Python", "OpenAI CLIP", "Vision-Language Models (VLM)", "PyTorch", "Zero-Shot Learning"]
+    }
+  ]
+}

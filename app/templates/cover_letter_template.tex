@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+\usepackage{parskip} % Adds nice spacing between paragraphs
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{\VAR{personal.name|default('Your Name')}}} \\ \vspace{5pt}
+    \VAR{personal.email|default('email@example.com')} $|$ \VAR{personal.phone|default('')} \\
+    \VAR{personal.linkedin|default('')} $|$ \VAR{personal.github|default('')}
+\end{center}
+
+\vspace{20pt}
+
+% --- Date & Salutation ---
+\today
+
+\vspace{10pt}
+
+\VAR{recipient}
+
+\vspace{10pt}
+
+% --- Body ---
+\VAR{cover_letter}
+
+\vspace{20pt}
+
+% --- Sign-off ---
+Sincerely, \\
+\vspace{10pt}
+\textbf{\VAR{personal.name|default('Your Name')}}
+
+\end{document}

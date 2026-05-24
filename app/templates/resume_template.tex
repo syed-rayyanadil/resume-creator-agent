@@ -1,0 +1,167 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.9cm,
+    bottom=0.9cm,
+    left=1cm,
+    right=1cm,
+    footskip=1.0cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10cm,
+        parsep=0.10cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 5cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+%-------------------------------------------
+\begin{document}
+
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+%---------- HEADING ----------
+\begin{header}
+    \fontsize{25pt}{25pt}\selectfont \VAR{personal.name}
+
+    \vspace{5pt}
+
+    \normalsize
+    \mbox{\VAR{personal.location}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{mailto:\VAR{personal.email}}{\underline{\VAR{personal.email}}}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{tel:\VAR{personal.phone}}{\VAR{personal.phone}}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{\VAR{personal.linkedin}}{\underline{LinkedIn}}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{\VAR{personal.github}}{\underline{GitHub}}}%
+\end{header}
+
+\vspace{5pt}
+
+%---------- EDUCATION ----------
+\section{Education}
+    \BLOCK{ for edu in education }
+    \begin{twocolentry}{\VAR{edu.period}}
+        \textbf{\VAR{edu.degree}}, \VAR{edu.institution} -- \VAR{edu.location}
+    \end{twocolentry}
+    \BLOCK{ if edu.thesis }
+    \vspace{0.05cm}
+    \begin{onecolentry}
+        \textit{Ongoing Thesis: "\VAR{edu.thesis}"}
+    \end{onecolentry}
+    \BLOCK{ endif }
+    \BLOCK{ if edu.final_year_project }
+    \vspace{0.05cm}
+    \begin{onecolentry}
+        \textit{Final Year Project: "\VAR{edu.final_year_project}"}
+    \end{onecolentry}
+    \BLOCK{ endif }
+    \vspace{0.2cm}
+    \BLOCK{ endfor }
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\VAR{tailored_experience}
+
+%---------- PROJECTS ----------
+\BLOCK{ if tailored_projects and tailored_projects|trim != '' }
+\section{Projects}
+\VAR{tailored_projects}
+\BLOCK{ endif }
+
+%---------- SKILLS ----------
+\BLOCK{ if tailored_skills and tailored_skills|trim != '' and tailored_skills != '{}' }
+\section{Skills}
+\VAR{tailored_skills}
+\BLOCK{ endif }
+
+%-------------------------------------------
+\end{document}

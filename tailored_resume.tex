@@ -1,0 +1,264 @@
+\documentclass[10pt, letterpaper]{article}
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.9cm,
+    bottom=0.9cm,
+    left=1cm,
+    right=1cm,
+    footskip=1.0cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3cm}{0.2cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10cm,
+        parsep=0.10cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 5cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+
+%-------------------------------------------
+\begin{document}
+
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+
+%---------- HEADING ----------
+\begin{header}
+    \fontsize{25pt}{25pt}\selectfont Syed Rayyan Adil
+
+    \vspace{5pt}
+
+    \normalsize
+    \mbox{Germany}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{mailto:syed.rayyanadil@gmail.com}{\underline{syed.rayyanadil@gmail.com}}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{tel:+49 152 06835173}{+49 152 06835173}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{LinkedIn}{\underline{LinkedIn}}}%
+    \kern 5.0pt%
+    \AND%
+    \kern 5.0pt%
+    \mbox{\hrefWithoutArrow{GitHub}{\underline{GitHub}}}%
+\end{header}
+
+\vspace{5pt}
+
+%---------- EDUCATION ----------
+\section{Education}
+        \begin{twocolentry}{October 2023 – October 2026}
+        \textbf{MSc in Artificial Intelligence}, Brandenburgische Technische Universität (BTU) -- Germany
+    \end{twocolentry}
+        \vspace{0.05cm}
+    \begin{onecolentry}
+        \textit{Ongoing Thesis: "Interpretable Image Classification by AutoEncoder Model"}
+    \end{onecolentry}
+            \vspace{0.2cm}
+        \begin{twocolentry}{August 2017 – May 2021}
+        \textbf{BSc in Computer Science}, FAST-NUCES -- Pakistan
+    \end{twocolentry}
+            \vspace{0.05cm}
+    \begin{onecolentry}
+        \textit{Final Year Project: "Smart Video Surveillance System using Computer Vision"}
+    \end{onecolentry}
+        \vspace{0.2cm}
+    
+%---------- EXPERIENCE ----------
+\section{Experience}
+\begin{twocolentry}{February 2025 – August 2025}
+    \textbf{Working Student – Software Engineer}, Schwarz Digits (Schwarz Gruppe) -- Germany
+\end{twocolentry}
+\vspace{0.10cm}
+\begin{onecolentry}
+\textit{Backend Services Migration}
+\end{onecolentry}
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Migrated 2 critical backend services from Java to Kotlin, utilizing Hexagonal Architecture to ensure scalable and highly available solutions serving millions of users, and applying Clean Code and TDD practices with Kotest and JUnit/Mockito to reduce code smells via SonarQube.
+    \item Engineered and managed Azure DevOps CI/CD pipelines with Docker and Kubernetes deployments, and oversaw PostgreSQL schema migrations via Liquibase to ensure reliable and efficient data processing.
+    \item Collaborated on building and shipping React (TypeScript) frontend features end-to-end, working closely with Product Managers via Jira to translate supply chain requirements into production-ready functionality, and leveraging Computer Vision knowledge to inform object detection and image classification discussions.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.3cm}
+
+\begin{twocolentry}{May 2022 – October 2023}
+    \textbf{Software Engineer}, Benchmatrix -- Pakistan
+\end{twocolentry}
+\vspace{0.10cm}
+\begin{onecolentry}
+\textit{Loan Origination System (LOS)}
+\end{onecolentry}
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Designed and shipped microservices supporting operations for over 7 banks and millions of users, applying design patterns and Clean Code principles using Java and Spring MVC
+    \item Architected and optimized REST APIs documented with Swagger, ensuring reliability across multiple banking integrations and applying principles of Computer Vision and Deep Learning for scalable architecture
+    \item Integrated frontend teams using Angular (JavaScript) and owned CI/CD pipelines via Jenkins, utilizing Docker and Kubernetes for containerization and orchestration
+    \item Managed MongoDB and SQL databases, leveraging PyTorch and OpenCV for data analysis and machine learning model integration, and coordinated cross-team delivery using Jira and GitHub Actions
+    \item Wrote automated tests to ensure reliability across multiple banking integrations, utilizing NLTK and SciPy for natural language processing and scientific computing
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.3cm}
+
+\begin{twocolentry}{July 2021 – May 2022}
+    \textbf{Software Engineer}, GoodCore Software -- Pakistan
+\end{twocolentry}
+\vspace{0.10cm}
+\begin{onecolentry}
+\textit{Project 1: Domain Registry Applications}
+\end{onecolentry}
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Designed and developed ICANN-recognized domain registry software using Java (Spring Boot), MySQL, and JPA/Hibernate, demonstrating expertise in scalable backend development and API creation.
+    \item Authored REST API documentation with Swagger and ensured reliability through JUnit/Mockito unit testing, highlighting attention to detail and commitment to code quality.
+    \item Deployed services on Wildfly and configured server environments via PuTTY, maintaining stable production operations and showcasing proficiency in deployment and configuration.
+\end{highlights}
+\end{onecolentry}
+\begin{onecolentry}
+\textit{Project 2: Briefing Management Platform}
+\end{onecolentry}
+\vspace{0.05cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Implemented business logic improvements and core features in a PHP (Laravel) and React (JavaScript) platform, leveraging transferable skills in software development and API integration.
+    \item Refactored state management with Redux and integrated Zoom API for client meetings, demonstrating ability to work with various APIs and technologies.
+    \item Drove automation of printed material generation (PDFs, Word docs) using Python, reducing manual effort for briefing workflows and showcasing proficiency in automation and process improvement.
+\end{highlights}
+\end{onecolentry}
+
+%---------- PROJECTS ----------
+\section{Projects}
+\begin{twocolentry}{\href{https://github.com/syed-rayyanadil/What-is-Cooking}{\underline{GitHub}}}
+    \textbf{What's Cooking?} | \textit{Python, Computer Vision, CNN, YOLO, Google Colab, PyCharm}
+\end{twocolentry}
+\vspace{0.10cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Accomplished auto-categorization of dishes based on ingredient similarities as measured by enhanced food recommendation systems, by doing training a cuisine type classifier on 60,000 dishes.
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.3cm}
+
+\begin{twocolentry}{\href{https://github.com/syed-rayyanadil/Smart-Video-Surveillance-System}{\underline{GitHub}}}
+    \textbf{Smart Video Surveillance System} | \textit{Python, Computer Vision, CNN, YOLO, Google Colab, PyCharm}
+\end{twocolentry}
+\vspace{0.10cm}
+\begin{onecolentry}
+\begin{highlights}
+    \item Accomplished real-time gun detection and person identification as measured by 70\% accuracy, by doing training a system on 50,000 images.
+\end{highlights}
+\end{onecolentry}
+
+%---------- SKILLS ----------
+\section{Skills}
+\begin{onecolentry}
+    \textbf{Languages:} Java, Kotlin, Python
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\begin{onecolentry}
+    \textbf{ML/DS Frameworks:} Computer Vision, Deep Learning, OpenCV, PyTorch
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\begin{onecolentry}
+    \textbf{Databases:} MySQL, PostgreSQL, SQL
+\end{onecolentry}
+
+\vspace{0.1cm}
+
+\begin{onecolentry}
+    \textbf{MLOps:} Azure DevOps, Docker, Git, GitHub Actions, Jenkins, Kubernetes, NLTK, PyCharm, SciPy
+\end{onecolentry}
+
+%-------------------------------------------
+\end{document}

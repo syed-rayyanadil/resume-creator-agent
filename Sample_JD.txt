@@ -1,0 +1,55 @@
+About the job
+At Flix2, we offer a tech-driven environment where innovation meets real-world impact, with competitive pay, strong growth opportunities, and a culture of collaboration and ownership. 
+
+We are looking for a motivated and curious Junior Java/Kotlin Engineer (m/f/d) to join our team in Supply Division and drive customer station experience to the next level!
+
+In an ever growing network, Flix customers worldwide expect a comfortable and seamless experience at our stations as part of their travel experience. Our self-organized, cross-functional and distributed team builds products to enable Flix station managers to scale management of the station inventory, which a wide range of internal tech teams across Flix depend on, and overall serves to improve the experience at our stations for millions of passengers.
+
+In this role, you will continue to shape the product by driving innovation, solving complex challenges, and creating a lasting impact on our organization.
+
+About The Role 
+
+You will join a mature environment where members support you in growing your technical and soft skills.
+You and your team will work closely with the Business Stakeholders on continuously developing and improving the product vision.
+You always keep the business value in mind when making decisions.
+You drive the development process using an agile environment.
+As part of your daily work, you will work closely with your fellow team members, for example in pair and ensemble programming, doing code reviews, testing, and operations.
+You frequently deliver new versions of the product, using continuous integration and delivery.
+You work confidently with or learn how to use cutting-edge technologies and tools including but not limited to:
+Kotlin across server and browser (we use Kotlin a lot!)
+JVM on server-side (Ktor, Axon Framework)
+Component-based Frontend (Compose HTML, but we valuable experience with similar libraries and frameworks)
+Distributed system architecture (Apache Kafka, HTTP/REST)
+Infrastructure with CI/CD (AWS, Docker, Kubernetes, Terraform, Datadog, Gitlab) 
+About You
+
+A completed Bachelor's or Master's degree in Computer Science, Information Systems, or equivalent industry experience
+You have experience in backend engineering using any JVM language (Kotlin is a plus)
+You possess an understanding of testing principles
+You have knowledge of SQL and relational databases
+You use Docker to run your application
+You use Git to version your source code
+Experience in frontend engineering is a plus
+You are passionate about learning new tools and keeping yourself up-to-date
+You are willing to take responsibility for the product and technical decisions
+You value a collaborative mindset, honest communication, experimenting, sharing knowledge and regular feedback
+Clear written and spoken English communication skills
+
+We recognize that everyone carries a unique set of valuable skills and experiences. If you think you could have an impact even though you don't meet 100% of the requirements, we still encourage you to apply. We want to hear from you! 
+
+What We Offer
+
+Travel perks: 12 free Flix vouchers + 12 discount vouchers for friends & family. 
+Work from (M)Anywhere: Depending on your role, work from another location for up to 60 days per year. 
+Hybrid work model: We are an office-first company, but we offer flexibility to balance work and life. 
+Wellbeing support: Access confidential 1:1 counselling, courses, and stress management for yourself and up to four family members. 
+Learning & Development: Take advantage of language classes, training courses, and expert-led sessions to grow your skills. 
+Mentoring Program: Connect with experienced colleagues to gain insights and accelerate your career. 
+
+To view more local benefits specific to each office location, please check out this link: Locations - Flix Career
+
+Why Join Flix?
+
+At Flix, we empower our teams to push boundaries and shape the future of mobility. As we continue to scale globally, we harness cutting-edge technology to make mobility smarter, more sustainable, and more affordable.
+
+If you’re looking for a place where you can drive change and redefine how millions of people travel, Flix is the place where you can lead your journey!
